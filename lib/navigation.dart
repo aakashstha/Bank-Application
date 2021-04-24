@@ -12,7 +12,7 @@ class Navigation extends StatefulWidget {
 }
 
 class _NavigationState extends State<Navigation> {
-  int _currentIndex = 0;
+  int _currentIndex = 0; 
   final _pageOptions = [
     Home(),
     ATM(),
