@@ -1,19 +1,20 @@
-import 'package:bank_application/atm.dart';
-import 'package:bank_application/mainHome.dart';
-import 'package:bank_application/more.dart';
-import 'package:bank_application/news.dart';
 import 'package:flutter/material.dart';
 import 'package:bank_application/themeColors.dart';
 
-class Home extends StatefulWidget {
+import 'package:bank_application/Home/home.dart';
+import 'package:bank_application/Home/atm.dart';
+import 'package:bank_application/Home/news.dart';
+import 'package:bank_application/More/more.dart';
+
+class Navigation extends StatefulWidget {
   @override
-  _HomeState createState() => _HomeState();
+  _NavigationState createState() => _NavigationState();
 }
 
-class _HomeState extends State<Home> {
+class _NavigationState extends State<Navigation> {
   int _currentIndex = 0;
   final _pageOptions = [
-    MainHome(),
+    Home(),
     ATM(),
     News(),
     More(),

@@ -1,12 +1,28 @@
 import 'package:bank_application/themeColors.dart';
 import 'package:flutter/material.dart';
 
-class AfterSignUp extends StatelessWidget {
+class SignUp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        leading: Row(
+          children: [
+            IconButton(
+              icon: Icon(
+                Icons.arrow_back_ios_rounded,
+                size: 28,
+              ),
+              onPressed: () {
+                Navigator.pop(context);
+              },
+            ),
+          ],
+        ),
+        backgroundColor: cornFlowerBlue,
+      ),
       body: Padding(
-        padding: EdgeInsets.only(left: 20, top: 126),
+        padding: EdgeInsets.only(top: 50, left: 20),
         child: Container(
           width: 374,
           height: 570,
@@ -42,7 +58,7 @@ class AfterSignUp extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 18),
                 child: Text(
-                  'The signup process cannot be done in the mobile itself you have to reach our branch which may located near you or in the respective area and the help desk there will guide you throuht the banking process and finally you can login to our system.',
+                  'The signup process cannot be done in the mobile itself you have to reach our branch which may located near you or in the respective area and the help desk there will guide you through the banking process and finally you can login to our system.',
                   style: TextStyle(
                     fontSize: 24,
                     color: black,

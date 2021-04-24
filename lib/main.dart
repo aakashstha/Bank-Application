@@ -1,18 +1,19 @@
+import 'package:bank_application/test.dart';
 import 'package:flutter/material.dart';
 
-import 'package:bank_application/afterSignUp.dart';
-import 'package:bank_application/atm.dart';
-import 'package:bank_application/helpDesk.dart';
-import 'package:bank_application/home.dart';
-import 'package:bank_application/more.dart';
-import 'package:bank_application/news.dart';
-import 'package:bank_application/payment1.dart';
-import 'package:bank_application/payment2.dart';
-import 'package:bank_application/scanToPay1.dart';
-import 'package:bank_application/scanToPay2.dart';
-import 'package:bank_application/sendMoney.dart';
+import 'package:bank_application/signUp.dart';
+import 'package:bank_application/Home/atm.dart';
+import 'package:bank_application/More/helpDesk.dart';
+import 'package:bank_application/navigation.dart';
+import 'package:bank_application/More/more.dart';
+import 'package:bank_application/Home/news.dart';
+import 'package:bank_application/More/payment1.dart';
+import 'package:bank_application/More/payment2.dart';
+import 'package:bank_application/More/scanToPay1.dart';
+import 'package:bank_application/More/scanToPay2.dart';
+import 'package:bank_application/More/sendMoney.dart';
 import 'package:bank_application/themeColors.dart';
-import 'package:bank_application/login.dart';
+import 'package:bank_application/logIn.dart';
 
 void main() {
   runApp(MyApp());
@@ -29,12 +30,16 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: cornFlowerBlue,
       ),
       routes: <String, WidgetBuilder>{
-        '/login': (context) => Login(),
-        '/afterSignUp': (context) => AfterSignUp(),
-        '/home': (context) => Home(),
+        '/logIn': (context) => Login(),
+        '/signUp': (context) => SignUp(),
+        // main pages in this application
+        '/navigation': (context) => Navigation(),
         '/atm': (context) => ATM(),
         '/news': (context) => News(),
         '/more': (context) => More(),
+
+        // Others
+
         '/sendMoney': (context) => SendMoney(),
         '/payment1': (context) => Payment1(),
         '/payment2': (context) => Payment2(),

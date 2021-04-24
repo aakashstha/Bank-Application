@@ -27,8 +27,11 @@ class _ATMState extends State<ATM> {
               height: 140,
             ),
             Container(
-              padding: EdgeInsets.symmetric(horizontal: 80),
-              color: white,
+              padding: EdgeInsets.symmetric(horizontal: 80, vertical: 6),
+              decoration: BoxDecoration(
+                color: white,
+                borderRadius: BorderRadius.circular(10),
+              ),
               child: DropdownButton<String>(
                 items: _atmLocation.map((String dropDownStringItem) {
                   return DropdownMenuItem<String>(
