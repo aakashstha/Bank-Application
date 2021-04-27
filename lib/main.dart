@@ -24,32 +24,30 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Bank Application',
-      theme: ThemeData(
-        scaffoldBackgroundColor: cornFlowerBlue,
-      ),
-      routes: <String, WidgetBuilder>{
-        '/logIn': (context) => Login(),
-        '/signUp': (context) => SignUp(),
-        // main pages in this application
-        '/navigation': (context) => Navigation(),
-        '/atm': (context) => ATM(),
-        '/news': (context) => News(),
-        '/more': (context) => More(),
+        debugShowCheckedModeBanner: false,
+        title: 'Bank Application',
+        theme: ThemeData(
+          scaffoldBackgroundColor: lightSlateBlue,
+        ),
+        routes: <String, WidgetBuilder>{
+          '/logIn': (context) => Login(),
+          '/signUp': (context) => SignUp(),
+          // main pages in this application
+          '/navigation': (context) => Navigation(),
+          '/atm': (context) => ATM(),
+          '/news': (context) => News(),
+          '/more': (context) => More(),
 
-        // Others
-
-        '/sendMoney': (context) => SendMoney(),
-        '/payment1': (context) => Payment1(),
-        '/payment2': (context) => Payment2(),
-        '/scanToPay1': (context) => ScanToPay1(),
-        '/scanToPay2': (context) => ScanToPay2(),
-        '/helpDesk': (context) => HelpDesk(),
-      },
-      home: Scaffold(
-        body: Login(),
-      ),
-    );
+          // Others
+          '/sendMoney': (context) => SendMoney(),
+          '/payment1': (context) => Payment1(),
+          '/payment2': (context) => Payment2(),
+          '/scanToPay1': (context) => ScanToPay1(),
+          '/scanToPay2': (context) => ScanToPay2(),
+          '/helpDesk': (context) => HelpDesk(),
+        },
+        home: Scaffold(
+          body: Login(),
+        ));
   }
 }

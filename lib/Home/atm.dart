@@ -52,7 +52,7 @@ class _ATMState extends State<ATM> {
               width: 200,
               height: 60,
               decoration: BoxDecoration(
-                color: monteCarlo,
+                color: bermuda,
                 borderRadius: BorderRadius.circular(40),
               ),
               child: CupertinoButton(

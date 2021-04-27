@@ -22,7 +22,7 @@ class _MoreState extends State<More> {
                   width: 180,
                   height: 140,
                   decoration: BoxDecoration(
-                    color: cornFlowerBlue,
+                    color: bermuda,
                     borderRadius: BorderRadius.circular(20),
                   ),
                   child: IconButton(
@@ -56,7 +56,7 @@ class _MoreState extends State<More> {
                   width: 180,
                   height: 140,
                   decoration: BoxDecoration(
-                    color: cornFlowerBlue,
+                    color: bermuda,
                     borderRadius: BorderRadius.circular(20),
                   ),
                   child: IconButton(
@@ -78,7 +78,9 @@ class _MoreState extends State<More> {
                         )
                       ],
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushNamed(context, "/payment1");
+                    },
                   ),
                 ),
               ],
@@ -92,7 +94,7 @@ class _MoreState extends State<More> {
                   width: 180,
                   height: 140,
                   decoration: BoxDecoration(
-                    color: cornFlowerBlue,
+                    color: bermuda,
                     borderRadius: BorderRadius.circular(20),
                   ),
                   child: IconButton(
@@ -126,7 +128,7 @@ class _MoreState extends State<More> {
                   width: 180,
                   height: 140,
                   decoration: BoxDecoration(
-                    color: cornFlowerBlue,
+                    color: bermuda,
                     borderRadius: BorderRadius.circular(20),
                   ),
                   child: IconButton(
@@ -163,7 +165,7 @@ class _MoreState extends State<More> {
                 "Log Out",
                 style: TextStyle(
                   fontSize: 20,
-                  color: cornFlowerBlue,
+                  color: bermuda,
                 ),
               ),
               onPressed: () {

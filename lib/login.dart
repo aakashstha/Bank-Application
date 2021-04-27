@@ -12,22 +12,20 @@ class _LoginState extends State<Login> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: ListView(
+        shrinkWrap: true,
         children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Container(
-                padding: EdgeInsetsDirectional.only(top: 50),
-                width: 200,
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(100),
-                  child: Image.asset('./images/hamroBank.png'),
-                ),
+          Align(
+            child: Container(
+              padding: EdgeInsetsDirectional.only(top: 50),
+              width: 200,
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(100),
+                child: Image.asset('./images/hamroBank.png'),
               ),
-            ],
+            ),
           ),
           SizedBox(
-            height: 50,
+            height: 40,
           ),
           // Input Field
           Padding(
@@ -43,12 +41,18 @@ class _LoginState extends State<Login> {
               ),
               child: TextField(
                 decoration: InputDecoration(
-                    prefixIcon: Icon(
+                  prefixIcon: Padding(
+                    padding: EdgeInsets.only(left: 25, right: 10),
+                    child: Icon(
                       Icons.phone_iphone,
-                      color: cornFlowerBlue,
+                      color: lightSlateBlue,
+                      size: 26,
                     ),
-                    hintText: 'Mobile Number',
-                    border: InputBorder.none),
+                  ),
+                  hintText: 'Mobile Number',
+                  hintStyle: TextStyle(fontSize: 18),
+                  border: InputBorder.none,
+                ),
               ),
             ),
           ),
@@ -68,76 +72,67 @@ class _LoginState extends State<Login> {
               ),
               child: TextField(
                 decoration: InputDecoration(
-                    prefixIcon: Icon(
-                      Icons.vpn_key_rounded,
-                      color: cornFlowerBlue,
+                    prefixIcon: Padding(
+                      padding: EdgeInsets.only(left: 25, right: 10),
+                      child: Icon(
+                        Icons.vpn_key_rounded,
+                        color: lightSlateBlue,
+                        size: 24,
+                      ),
                     ),
                     hintText: 'Password',
+                    hintStyle: TextStyle(fontSize: 18),
                     border: InputBorder.none),
               ),
             ),
           ),
           SizedBox(
-            height: 50,
+            height: 40,
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Container(
-                height: 60,
-                width: 180,
-                decoration: BoxDecoration(
-                  color: monteCarlo,
-                  borderRadius: BorderRadius.circular(20),
-                ),
-                child: CupertinoButton(
-                  child: Text(
-                    "Sign Up",
-                    style: TextStyle(
-                      fontSize: 24,
-                      color: black,
-                    ),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 10),
+            child: Container(
+              height: 65,
+              decoration: BoxDecoration(
+                color: bermuda,
+                borderRadius: BorderRadius.circular(15),
+              ),
+              child: CupertinoButton(
+                child: Text(
+                  "Log In",
+                  style: TextStyle(
+                    fontSize: 20,
+                    color: black,
                   ),
-                  onPressed: () {
-                    Navigator.pushNamed(context, "/signUp");
-                  },
                 ),
+                onPressed: () {
+                  Navigator.pushNamed(context, "/navigation");
+                },
               ),
-              SizedBox(
-                width: 26,
-              ),
-              Container(
-                height: 60,
-                width: 180,
-                decoration: BoxDecoration(
-                  color: monteCarlo,
-                  borderRadius: BorderRadius.circular(20),
-                ),
-                child: CupertinoButton(
-                  child: Text(
-                    "Log In",
-                    style: TextStyle(
-                      fontSize: 24,
-                      color: black,
-                    ),
-                  ),
-                  onPressed: () {
-                    Navigator.pushNamed(context, "/navigation");
-                  },
-                ),
-              ),
-            ],
+            ),
           ),
           SizedBox(
-            height: 10,
+            height: 20,
           ),
           TextButton(
-            child: Text(
-              "Forgot Password?",
-              style: TextStyle(
-                fontSize: 24,
-                color: white,
-              ),
+            child: Row(
+              children: [
+                Icon(
+                  Icons.fingerprint,
+                  color: white,
+                  size: 35,
+                ),
+                SizedBox(
+                  width: 15,
+                ),
+                Text(
+                  "Tap to login with fingerprint",
+                  style: TextStyle(
+                    fontSize: 18,
+                    color: white,
+                  ),
+                ),
+              ],
             ),
             onPressed: () {},
           ),

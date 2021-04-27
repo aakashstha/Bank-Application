@@ -19,7 +19,7 @@ class SignUp extends StatelessWidget {
             ),
           ],
         ),
-        backgroundColor: cornFlowerBlue,
+        backgroundColor: lightSlateBlue,
       ),
       body: Padding(
         padding: EdgeInsets.only(top: 50, left: 20),

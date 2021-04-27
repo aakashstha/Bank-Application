@@ -12,7 +12,7 @@ class Navigation extends StatefulWidget {
 }
 
 class _NavigationState extends State<Navigation> {
-  int _currentIndex = 0; 
+  int _currentIndex = 0;
   final _pageOptions = [
     Home(),
     ATM(),
@@ -25,7 +25,7 @@ class _NavigationState extends State<Navigation> {
       body: _pageOptions[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
-        selectedItemColor: cornFlowerBlue,
+        selectedItemColor: lightSlateBlue,
         currentIndex: _currentIndex,
         items: [
           BottomNavigationBarItem(

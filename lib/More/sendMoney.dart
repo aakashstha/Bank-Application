@@ -25,7 +25,7 @@ class _SendMoneyState extends State<SendMoney> {
             ),
           ],
         ),
-        backgroundColor: cornFlowerBlue,
+        backgroundColor: lightSlateBlue,
       ),
       body: Padding(
         padding: EdgeInsets.only(top: 40),
@@ -206,7 +206,7 @@ class _SendMoneyState extends State<SendMoney> {
                     height: 60,
                     width: 180,
                     decoration: BoxDecoration(
-                      color: monteCarlo,
+                      color: bermuda,
                       borderRadius: BorderRadius.circular(20),
                     ),
                     child: CupertinoButton(
@@ -227,7 +227,7 @@ class _SendMoneyState extends State<SendMoney> {
                     height: 60,
                     width: 180,
                     decoration: BoxDecoration(
-                      color: monteCarlo,
+                      color: bermuda,
                       borderRadius: BorderRadius.circular(20),
                     ),
                     child: CupertinoButton(

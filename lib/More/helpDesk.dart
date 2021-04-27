@@ -20,7 +20,7 @@ class HelpDesk extends StatelessWidget {
             ),
           ],
         ),
-        backgroundColor: cornFlowerBlue,
+        backgroundColor: bermuda,
       ),
       body: Container(
         child: Column(

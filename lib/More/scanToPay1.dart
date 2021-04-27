@@ -26,7 +26,7 @@ class _ScanToPay1State extends State<ScanToPay1> {
             ),
           ],
         ),
-        backgroundColor: cornFlowerBlue,
+        backgroundColor: lightSlateBlue,
       ),
       body: Container(
         padding: EdgeInsets.symmetric(horizontal: 20),
@@ -86,7 +86,7 @@ class _ScanToPay1State extends State<ScanToPay1> {
                   width: 180,
                   height: 60,
                   decoration: BoxDecoration(
-                    color: monteCarlo,
+                    color: bermuda,
                     borderRadius: BorderRadius.circular(20),
                   ),
                   child: CupertinoButton(
@@ -107,7 +107,7 @@ class _ScanToPay1State extends State<ScanToPay1> {
                   width: 180,
                   height: 60,
                   decoration: BoxDecoration(
-                    color: monteCarlo,
+                    color: bermuda,
                     borderRadius: BorderRadius.circular(20),
                   ),
                   child: CupertinoButton(

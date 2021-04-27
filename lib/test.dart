@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:bank_application/themeColors.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class Test extends StatefulWidget {
   @override
@@ -9,22 +10,26 @@ class Test extends StatefulWidget {
 class _TestState extends State<Test> {
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Container(
-        width: 400,
-        height: 400,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Center(
-              child: Container(
-                color: white,
-                width: 200,
-                height: 200,
-              ),
-            )
-          ],
+    AppBar appBar = AppBar(
+      title: Text('Demo'),
+    );
+    return Scaffold(
+      appBar: appBar,
+      backgroundColor: white,
+      body: Center(
+        child: SvgPicture.asset(
+          'images/fingerprint.svg',
+          width: 30,
+          height: 40,
+          semanticsLabel: 'vector',
+          color: Colors.red,
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          double height = appBar.preferredSize.width;
+          print(height);
+        },
       ),
     );
   }
