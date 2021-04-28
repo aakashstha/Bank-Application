@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:bank_application/themeColors.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter_svg/svg.dart';
 
 class More extends StatefulWidget {
   @override
@@ -19,22 +20,24 @@ class _MoreState extends State<More> {
             Row(
               children: [
                 Container(
-                  width: 180,
+                  width: 170,
                   height: 140,
+                  padding: EdgeInsets.only(top: 10),
                   decoration: BoxDecoration(
-                    color: bermuda,
+                    color: lightSlateBlue,
                     borderRadius: BorderRadius.circular(20),
                   ),
                   child: IconButton(
                     icon: Column(
                       children: [
                         SizedBox(height: 5),
-                        Icon(
-                          Icons.send,
-                          size: 90,
+                        SvgPicture.asset(
+                          'images/sendMoney.svg',
+                          width: 70,
+                          height: 70,
                           color: white,
                         ),
-                        SizedBox(height: 5),
+                        SizedBox(height: 8),
                         Text(
                           'Send Money',
                           style: TextStyle(
@@ -53,19 +56,21 @@ class _MoreState extends State<More> {
                   width: 24,
                 ),
                 Container(
-                  width: 180,
+                  width: 170,
                   height: 140,
+                  padding: EdgeInsets.only(top: 10),
                   decoration: BoxDecoration(
-                    color: bermuda,
+                    color: lightSlateBlue,
                     borderRadius: BorderRadius.circular(20),
                   ),
                   child: IconButton(
                     icon: Column(
                       children: [
                         SizedBox(height: 5),
-                        Icon(
-                          Icons.payment_outlined,
-                          size: 90,
+                        SvgPicture.asset(
+                          'images/payment.svg',
+                          width: 70,
+                          height: 70,
                           color: white,
                         ),
                         SizedBox(height: 5),
@@ -91,19 +96,21 @@ class _MoreState extends State<More> {
             Row(
               children: [
                 Container(
-                  width: 180,
+                  width: 170,
                   height: 140,
+                  padding: EdgeInsets.only(top: 10),
                   decoration: BoxDecoration(
-                    color: bermuda,
+                    color: lightSlateBlue,
                     borderRadius: BorderRadius.circular(20),
                   ),
                   child: IconButton(
                     icon: Column(
                       children: [
-                        SizedBox(height: 10),
-                        Icon(
-                          Icons.qr_code_scanner_outlined,
-                          size: 85,
+                        SizedBox(height: 5),
+                        SvgPicture.asset(
+                          'images/qrCode.svg',
+                          width: 70,
+                          height: 70,
                           color: white,
                         ),
                         SizedBox(height: 5),
@@ -125,10 +132,11 @@ class _MoreState extends State<More> {
                   width: 24,
                 ),
                 Container(
-                  width: 180,
+                  width: 170,
                   height: 140,
+                  padding: EdgeInsets.only(top: 10),
                   decoration: BoxDecoration(
-                    color: bermuda,
+                    color: lightSlateBlue,
                     borderRadius: BorderRadius.circular(20),
                   ),
                   child: IconButton(
@@ -137,7 +145,7 @@ class _MoreState extends State<More> {
                         SizedBox(height: 5),
                         Icon(
                           Icons.help_outline_rounded,
-                          size: 90,
+                          size: 70,
                           color: white,
                         ),
                         SizedBox(height: 5),
@@ -158,14 +166,14 @@ class _MoreState extends State<More> {
               ],
             ),
             SizedBox(
-              height: 100,
+              height: 250,
             ),
             TextButton(
               child: Text(
                 "Log Out",
                 style: TextStyle(
                   fontSize: 20,
-                  color: bermuda,
+                  color: lightSlateBlue,
                 ),
               ),
               onPressed: () {

@@ -5,138 +5,196 @@ import 'package:flutter/cupertino.dart';
 class News extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.only(top: 24, left: 23),
-      child: Container(
-        width: 368,
-        height: 623,
-        decoration: BoxDecoration(
-          color: white,
-          borderRadius: BorderRadius.circular(20),
-        ),
-        child: Column(
-          children: [
-            SizedBox(
-              height: 30,
-            ),
-            Container(
-              width: 300,
-              height: 300,
-              decoration: BoxDecoration(
-                color: Colors.green,
-                borderRadius: BorderRadius.circular(20),
-              ),
-              child: Column(
-                children: [
-                  SizedBox(height: 40),
-                  Text(
-                    'Hamro Bank \n-- Share',
-                    style: TextStyle(
-                      fontSize: 36,
-                      color: white,
+    return Container(
+      child: ListView(
+        children: [
+          Column(
+            children: [
+              Container(
+                width: 390,
+                height: 275,
+                decoration: BoxDecoration(
+                  color: white,
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                child: Column(
+                  children: [
+                    SizedBox(
+                      height: 40,
                     ),
-                  ),
-                  SizedBox(height: 30),
-                  Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 10),
-                    child: Table(
-                      border: TableBorder.all(color: black, width: 1),
+
+                    // Share News
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        TableRow(children: [
-                          TableCell(
-                            child: Center(
-                              child: Text(
-                                'Symbol',
-                                style: TextStyle(
-                                    color: white, fontWeight: FontWeight.bold),
-                              ),
+                        Text(
+                          'Hamro Bank \n-- Share',
+                          style: TextStyle(
+                              fontSize: 40,
+                              color: indigo,
+                              fontFamily: 'Arial_Rounded'),
+                        ),
+                        SizedBox(width: 10),
+                        Container(
+                          width: 40,
+                          height: 40,
+                          decoration: BoxDecoration(
+                            color: green,
+                            borderRadius: BorderRadius.circular(
+                              20,
                             ),
                           ),
-                          TableCell(
-                            child: Center(
-                              child: Text(
-                                'LTP',
-                                style: TextStyle(
-                                    color: white, fontWeight: FontWeight.bold),
-                              ),
-                            ),
-                          ),
-                          TableCell(
-                            child: Center(
-                              child: Text(
-                                'High',
-                                style: TextStyle(
-                                    color: white, fontWeight: FontWeight.bold),
-                              ),
-                            ),
-                          ),
-                          TableCell(
-                            child: Center(
-                              child: Text(
-                                'Low',
-                                style: TextStyle(
-                                    color: white, fontWeight: FontWeight.bold),
-                              ),
-                            ),
-                          ),
-                        ]),
-                        TableRow(children: [
-                          TableCell(
-                            child: Center(
-                              child: Text(
-                                'HABA',
-                                style: TextStyle(color: white),
-                              ),
-                            ),
-                          ),
-                          TableCell(
-                            child: Center(
-                              child: Text(
-                                '904',
-                                style: TextStyle(color: white),
-                              ),
-                            ),
-                          ),
-                          TableCell(
-                            child: Center(
-                              child: Text(
-                                '910',
-                                style: TextStyle(color: white),
-                              ),
-                            ),
-                          ),
-                          TableCell(
-                            child: Center(
-                              child: Text(
-                                '901',
-                                style: TextStyle(color: white),
-                              ),
-                            ),
-                          ),
-                        ]),
+                        )
                       ],
                     ),
-                  ),
-                ],
-              ),
-            ),
-            SizedBox(height: 30),
-            Card(
-              color: Colors.yellow,
-              child: Container(
-                width: 300,
-                height: 150,
-                padding: EdgeInsets.all(20),
-                child: Center(
-                  child: Text(
-                    'Bank is close today due to some internal circumstances.',
-                    style: TextStyle(fontSize: 24),
-                  ),
+                    SizedBox(height: 30),
+
+                    // Share Table
+                    Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 10),
+                      child: Table(
+                        border: TableBorder.all(color: black, width: 0),
+                        children: [
+                          TableRow(
+                            decoration: BoxDecoration(
+                              color: black,
+                            ),
+                            children: [
+                              TableCell(
+                                child: Center(
+                                  child: Text(
+                                    'Symbol',
+                                    style: TextStyle(
+                                        color: white,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                ),
+                              ),
+                              TableCell(
+                                child: Center(
+                                  child: Text(
+                                    'LTP',
+                                    style: TextStyle(
+                                        color: white,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                ),
+                              ),
+                              TableCell(
+                                child: Center(
+                                  child: Text(
+                                    'High',
+                                    style: TextStyle(
+                                        color: white,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                ),
+                              ),
+                              TableCell(
+                                child: Center(
+                                  child: Text(
+                                    'Low',
+                                    style: TextStyle(
+                                        color: white,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                          TableRow(
+                            children: [
+                              TableCell(
+                                child: Center(
+                                  child: Text(
+                                    'HABA',
+                                    style: TextStyle(color: black),
+                                  ),
+                                ),
+                              ),
+                              TableCell(
+                                child: Center(
+                                  child: Text(
+                                    '904',
+                                    style: TextStyle(color: black),
+                                  ),
+                                ),
+                              ),
+                              TableCell(
+                                child: Center(
+                                  child: Text(
+                                    '910',
+                                    style: TextStyle(color: black),
+                                  ),
+                                ),
+                              ),
+                              TableCell(
+                                child: Center(
+                                  child: Text(
+                                    '901',
+                                    style: TextStyle(color: black),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
                 ),
               ),
-            ),
-          ],
+              Padding(
+                padding: const EdgeInsets.only(top: 50, bottom: 15),
+                child: Text(
+                  'Other Notice of Bank',
+                  style: TextStyle(
+                      color: white,
+                      fontSize: 26,
+                      fontFamily: 'Arial_Rounded',
+                      fontWeight: FontWeight.w600,
+                      decoration: TextDecoration.underline),
+                ),
+              ),
+              noticeSection(
+                  'Bank is close today due to some internal circumstances.'),
+              noticeSection('Bank is looking for a professional photographer.'),
+              noticeSection('Intern is availabel for the bachelor’s student.'),
+              noticeSection('Bank is going to issue mutual fund this week.'),
+              SizedBox(height: 50)
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget noticeSection(String title) {
+    return Container(
+      width: 390,
+      decoration: BoxDecoration(borderRadius: BorderRadius.circular(20)),
+      child: Card(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(vertical: 14),
+          child: ListTile(
+            title: info(title, 22),
+          ),
         ),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(20),
+        ),
+      ),
+    );
+  }
+
+  Widget info(String data, double fontSize) {
+    return Text(
+      data,
+      style: TextStyle(
+        color: indigo,
+        fontSize: fontSize,
+        fontFamily: 'Arial_Rounded',
+        fontWeight: FontWeight.w600,
       ),
     );
   }

@@ -4,7 +4,7 @@ import 'package:bank_application/themeColors.dart';
 import 'package:bank_application/Home/home.dart';
 import 'package:bank_application/Home/atm.dart';
 import 'package:bank_application/Home/news.dart';
-import 'package:bank_application/More/more.dart';
+import 'package:bank_application/Home/More/more.dart';
 
 class Navigation extends StatefulWidget {
   @override

@@ -6,6 +6,10 @@ class SignUp extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        title: Text(
+          'Sign Up',
+          style: TextStyle(fontSize: 18),
+        ),
         leading: Row(
           children: [
             IconButton(
@@ -22,10 +26,10 @@ class SignUp extends StatelessWidget {
         backgroundColor: lightSlateBlue,
       ),
       body: Padding(
-        padding: EdgeInsets.only(top: 50, left: 20),
+        padding: EdgeInsets.only(top: 50, left: 12),
         child: Container(
-          width: 374,
-          height: 570,
+          width: 390,
+          height: 535,
           decoration: BoxDecoration(
             color: white,
             borderRadius: BorderRadius.circular(20),
@@ -37,13 +41,15 @@ class SignUp extends StatelessWidget {
                 child: Text(
                   'Sign Up Process',
                   style: TextStyle(
-                    fontSize: 44,
+                    color: indigo,
+                    fontSize: 46,
                     decoration: TextDecoration.underline,
+                    fontFamily: 'Arial',
                   ),
                 ),
               ),
               SizedBox(
-                height: 56,
+                height: 50,
               ),
               Text(
                 '🙏',
@@ -53,15 +59,16 @@ class SignUp extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                height: 56,
+                height: 40,
               ),
               Padding(
-                padding: EdgeInsets.symmetric(horizontal: 18),
+                padding: EdgeInsets.symmetric(horizontal: 20),
                 child: Text(
                   'The signup process cannot be done in the mobile itself you have to reach our branch which may located near you or in the respective area and the help desk there will guide you through the banking process and finally you can login to our system.',
                   style: TextStyle(
+                    color: indigo,
                     fontSize: 24,
-                    color: black,
+                    fontFamily: 'Arial',
                   ),
                 ),
               )

@@ -12,6 +12,10 @@ class _Payment2State extends State<Payment2> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        title: Text(
+          'NTC Prepaid Topup',
+          style: TextStyle(fontSize: 18),
+        ),
         leading: Row(
           children: [
             IconButton(
@@ -25,25 +29,25 @@ class _Payment2State extends State<Payment2> {
             ),
           ],
         ),
-        backgroundColor: bermuda,
+        backgroundColor: lightSlateBlue,
       ),
       body: Container(
         padding: EdgeInsets.symmetric(horizontal: 10),
         child: ListView(
-          padding: EdgeInsets.only(top: 60),
+          padding: EdgeInsets.only(top: 45),
           children: [
             Padding(
               padding: EdgeInsets.only(left: 20, bottom: 5),
               child: Text(
                 'Amount',
                 style: TextStyle(
-                  fontSize: 22,
+                  fontSize: 20,
                   color: white,
                 ),
               ),
             ),
             Container(
-              width: 394,
+              width: 390,
               padding: EdgeInsets.symmetric(vertical: 5.0),
               decoration: BoxDecoration(
                 color: white,
@@ -60,20 +64,20 @@ class _Payment2State extends State<Payment2> {
               ),
             ),
             SizedBox(
-              height: 20,
+              height: 30,
             ),
             Padding(
               padding: EdgeInsets.only(left: 20, bottom: 5),
               child: Text(
                 'Ncell No.',
                 style: TextStyle(
-                  fontSize: 22,
+                  fontSize: 20,
                   color: white,
                 ),
               ),
             ),
             Container(
-              width: 394,
+              width: 390,
               padding: EdgeInsets.symmetric(vertical: 5.0),
               decoration: BoxDecoration(
                 color: white,
@@ -83,8 +87,12 @@ class _Payment2State extends State<Payment2> {
               ),
               child: TextField(
                 decoration: InputDecoration(
-                  suffixIcon: Icon(
-                    Icons.contact_phone,
+                  suffixIcon: Padding(
+                    padding: const EdgeInsets.only(right: 10),
+                    child: Icon(
+                      Icons.contact_phone,
+                      color: lightSlateBlue,
+                    ),
                   ),
                   contentPadding: EdgeInsets.only(left: 20, top: 15),
                   hintText: 'Phone Number',
@@ -93,20 +101,20 @@ class _Payment2State extends State<Payment2> {
               ),
             ),
             SizedBox(
-              height: 20,
+              height: 30,
             ),
             Padding(
               padding: EdgeInsets.only(left: 20, bottom: 5),
               child: Text(
                 'Pay With',
                 style: TextStyle(
-                  fontSize: 22,
+                  fontSize: 20,
                   color: white,
                 ),
               ),
             ),
             Container(
-              width: 394,
+              width: 390,
               padding: EdgeInsets.symmetric(vertical: 5.0),
               decoration: BoxDecoration(
                 color: white,
@@ -118,40 +126,25 @@ class _Payment2State extends State<Payment2> {
                 decoration: InputDecoration(
                   contentPadding: EdgeInsets.only(left: 20),
                   hintText: '1876987435627162',
+                  hintStyle: TextStyle(
+                    fontSize: 16,
+                    color: indigo,
+                    fontFamily: 'RobotoCondenced',
+                  ),
                   border: InputBorder.none,
                 ),
               ),
             ),
             SizedBox(
-              height: 60,
+              height: 80,
             ),
-            Row(
+            // Buttons
+            Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Container(
+                  width: 390,
                   height: 60,
-                  width: 180,
-                  decoration: BoxDecoration(
-                    color: bermuda,
-                    borderRadius: BorderRadius.circular(20),
-                  ),
-                  child: CupertinoButton(
-                    child: Text(
-                      "Cancel",
-                      style: TextStyle(
-                        fontSize: 24,
-                        color: black,
-                      ),
-                    ),
-                    onPressed: () {},
-                  ),
-                ),
-                SizedBox(
-                  width: 26,
-                ),
-                Container(
-                  height: 60,
-                  width: 180,
                   decoration: BoxDecoration(
                     color: bermuda,
                     borderRadius: BorderRadius.circular(20),
@@ -160,12 +153,25 @@ class _Payment2State extends State<Payment2> {
                     child: Text(
                       "Submit",
                       style: TextStyle(
-                        fontSize: 24,
+                        fontSize: 20,
                         color: black,
                       ),
                     ),
                     onPressed: () {},
                   ),
+                ),
+                SizedBox(height: 10),
+                TextButton(
+                  child: Text(
+                    "Cancel",
+                    style: TextStyle(
+                      fontSize: 18,
+                      color: white,
+                    ),
+                  ),
+                  onPressed: () {
+                    // Navigator.pushNamed(context, "/");
+                  },
                 ),
               ],
             ),

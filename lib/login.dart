@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:bank_application/themeColors.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Login extends StatefulWidget {
   @override
@@ -16,7 +17,7 @@ class _LoginState extends State<Login> {
         children: [
           Align(
             child: Container(
-              padding: EdgeInsetsDirectional.only(top: 50),
+              padding: EdgeInsetsDirectional.only(top: 34, bottom: 40),
               width: 200,
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(100),
@@ -24,15 +25,12 @@ class _LoginState extends State<Login> {
               ),
             ),
           ),
-          SizedBox(
-            height: 40,
-          ),
           // Input Field
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 10),
             child: Container(
               width: 394,
-              padding: EdgeInsets.symmetric(vertical: 6),
+              padding: EdgeInsets.symmetric(vertical: 5),
               decoration: BoxDecoration(
                 color: white,
                 borderRadius: BorderRadius.all(
@@ -50,8 +48,6 @@ class _LoginState extends State<Login> {
                     ),
                   ),
                   hintText: 'Mobile Number',
-                  hintStyle: TextStyle(fontSize: 18),
-                  border: InputBorder.none,
                 ),
               ),
             ),
@@ -63,7 +59,7 @@ class _LoginState extends State<Login> {
             padding: EdgeInsets.symmetric(horizontal: 10),
             child: Container(
               width: 394,
-              padding: EdgeInsets.symmetric(vertical: 6),
+              padding: EdgeInsets.symmetric(vertical: 5),
               decoration: BoxDecoration(
                 color: white,
                 borderRadius: BorderRadius.all(
@@ -72,20 +68,20 @@ class _LoginState extends State<Login> {
               ),
               child: TextField(
                 decoration: InputDecoration(
-                    prefixIcon: Padding(
-                      padding: EdgeInsets.only(left: 25, right: 10),
-                      child: Icon(
-                        Icons.vpn_key_rounded,
-                        color: lightSlateBlue,
-                        size: 24,
-                      ),
+                  prefixIcon: Padding(
+                    padding: EdgeInsets.only(left: 25, right: 10),
+                    child: Icon(
+                      Icons.vpn_key_rounded,
+                      color: lightSlateBlue,
+                      size: 24,
                     ),
-                    hintText: 'Password',
-                    hintStyle: TextStyle(fontSize: 18),
-                    border: InputBorder.none),
+                  ),
+                  hintText: 'Password',
+                ),
               ),
             ),
           ),
+
           SizedBox(
             height: 40,
           ),
@@ -112,29 +108,65 @@ class _LoginState extends State<Login> {
             ),
           ),
           SizedBox(
-            height: 20,
+            height: 8,
           ),
-          TextButton(
-            child: Row(
-              children: [
-                Icon(
-                  Icons.fingerprint,
-                  color: white,
-                  size: 35,
-                ),
-                SizedBox(
-                  width: 15,
-                ),
-                Text(
-                  "Tap to login with fingerprint",
-                  style: TextStyle(
-                    fontSize: 18,
-                    color: white,
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Column(
+                children: [
+                  TextButton(
+                    child: Row(
+                      children: [
+                        Icon(
+                          Icons.fingerprint,
+                          color: white,
+                          size: 35,
+                        ),
+                        SizedBox(
+                          width: 15,
+                        ),
+                        Text(
+                          "Tap to login with fingerprint",
+                          style: TextStyle(
+                            fontSize: 18,
+                            color: white,
+                          ),
+                        ),
+                      ],
+                    ),
+                    onPressed: () {
+                      Navigator.pushNamed(context, "/navigation");
+                    },
                   ),
-                ),
-              ],
-            ),
-            onPressed: () {},
+                  SizedBox(
+                    height: 35,
+                  ),
+                  TextButton(
+                    child: Text(
+                      "Sign Up",
+                      style: TextStyle(
+                        fontSize: 18,
+                        color: white,
+                      ),
+                    ),
+                    onPressed: () {
+                      Navigator.pushNamed(context, "/signUp");
+                    },
+                  ),
+                  TextButton(
+                    child: Text(
+                      "Forgot Password?",
+                      style: TextStyle(
+                        fontSize: 18,
+                        color: white,
+                      ),
+                    ),
+                    onPressed: () {},
+                  ),
+                ],
+              ),
+            ],
           ),
         ],
       ),
