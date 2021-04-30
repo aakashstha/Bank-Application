@@ -1,6 +1,6 @@
 # Hamro Bank
 
-Created with Flutter project.
+Created with Flutter Framework.
 
 ## Getting Started
 
@@ -9,4 +9,4 @@ Created with Flutter project.
 - Select the Dart Plugin and click install.
 - Restart your code editor.
 - Now from the folder navigation open this Hamro Bank project and run it.
-- You need to run Simulator iPhone 8 Plus of in the same physical device because this project is compatable only with iphone 8 Plus.
+- You need to run Simulator iPhone 8 Plus or in the same physical device because this project is compatable only with iphone 8 Plus.
