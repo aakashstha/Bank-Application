@@ -10,6 +10,7 @@ class News extends StatelessWidget {
         children: [
           Column(
             children: [
+              SizedBox(height: 25),
               Container(
                 width: 390,
                 height: 275,
@@ -47,11 +48,11 @@ class News extends StatelessWidget {
                         )
                       ],
                     ),
-                    SizedBox(height: 30),
+                    SizedBox(height: 20),
 
                     // Share Table
                     Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 10),
+                      padding: EdgeInsets.symmetric(horizontal: 20),
                       child: Table(
                         border: TableBorder.all(color: black, width: 0),
                         children: [
@@ -61,42 +62,58 @@ class News extends StatelessWidget {
                             ),
                             children: [
                               TableCell(
-                                child: Center(
-                                  child: Text(
-                                    'Symbol',
-                                    style: TextStyle(
-                                        color: white,
-                                        fontWeight: FontWeight.bold),
+                                child: SizedBox(
+                                  height: 45,
+                                  child: Center(
+                                    child: Text(
+                                      'Symbol',
+                                      style: TextStyle(
+                                          color: white,
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.bold),
+                                    ),
                                   ),
                                 ),
                               ),
                               TableCell(
-                                child: Center(
-                                  child: Text(
-                                    'LTP',
-                                    style: TextStyle(
-                                        color: white,
-                                        fontWeight: FontWeight.bold),
+                                child: SizedBox(
+                                  height: 45,
+                                  child: Center(
+                                    child: Text(
+                                      'LTP',
+                                      style: TextStyle(
+                                          color: white,
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.bold),
+                                    ),
                                   ),
                                 ),
                               ),
                               TableCell(
-                                child: Center(
-                                  child: Text(
-                                    'High',
-                                    style: TextStyle(
-                                        color: white,
-                                        fontWeight: FontWeight.bold),
+                                child: SizedBox(
+                                  height: 45,
+                                  child: Center(
+                                    child: Text(
+                                      'High',
+                                      style: TextStyle(
+                                          color: white,
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.bold),
+                                    ),
                                   ),
                                 ),
                               ),
                               TableCell(
-                                child: Center(
-                                  child: Text(
-                                    'Low',
-                                    style: TextStyle(
-                                        color: white,
-                                        fontWeight: FontWeight.bold),
+                                child: SizedBox(
+                                  height: 45,
+                                  child: Center(
+                                    child: Text(
+                                      'Low',
+                                      style: TextStyle(
+                                          color: white,
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.bold),
+                                    ),
                                   ),
                                 ),
                               ),
@@ -105,34 +122,58 @@ class News extends StatelessWidget {
                           TableRow(
                             children: [
                               TableCell(
-                                child: Center(
-                                  child: Text(
-                                    'HABA',
-                                    style: TextStyle(color: black),
+                                child: SizedBox(
+                                  height: 35,
+                                  child: Center(
+                                    child: Text(
+                                      'HABA',
+                                      style: TextStyle(
+                                        color: black,
+                                        fontSize: 16,
+                                      ),
+                                    ),
                                   ),
                                 ),
                               ),
                               TableCell(
-                                child: Center(
-                                  child: Text(
-                                    '904',
-                                    style: TextStyle(color: black),
+                                child: SizedBox(
+                                  height: 35,
+                                  child: Center(
+                                    child: Text(
+                                      '904',
+                                      style: TextStyle(
+                                        color: black,
+                                        fontSize: 16,
+                                      ),
+                                    ),
                                   ),
                                 ),
                               ),
                               TableCell(
-                                child: Center(
-                                  child: Text(
-                                    '910',
-                                    style: TextStyle(color: black),
+                                child: SizedBox(
+                                  height: 35,
+                                  child: Center(
+                                    child: Text(
+                                      '910',
+                                      style: TextStyle(
+                                        color: black,
+                                        fontSize: 16,
+                                      ),
+                                    ),
                                   ),
                                 ),
                               ),
                               TableCell(
-                                child: Center(
-                                  child: Text(
-                                    '901',
-                                    style: TextStyle(color: black),
+                                child: SizedBox(
+                                  height: 35,
+                                  child: Center(
+                                    child: Text(
+                                      '901',
+                                      style: TextStyle(
+                                        color: black,
+                                        fontSize: 16,
+                                      ),
+                                    ),
                                   ),
                                 ),
                               ),

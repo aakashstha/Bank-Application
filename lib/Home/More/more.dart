@@ -26,6 +26,14 @@ class _MoreState extends State<More> {
                   decoration: BoxDecoration(
                     color: lightSlateBlue,
                     borderRadius: BorderRadius.circular(20),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.withOpacity(0.6),
+                        spreadRadius: 2,
+                        blurRadius: 7,
+                        offset: Offset(0, 4),
+                      ),
+                    ],
                   ),
                   child: IconButton(
                     icon: Column(
@@ -62,6 +70,14 @@ class _MoreState extends State<More> {
                   decoration: BoxDecoration(
                     color: lightSlateBlue,
                     borderRadius: BorderRadius.circular(20),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.withOpacity(0.6),
+                        spreadRadius: 2,
+                        blurRadius: 7,
+                        offset: Offset(0, 4),
+                      ),
+                    ],
                   ),
                   child: IconButton(
                     icon: Column(
@@ -84,7 +100,7 @@ class _MoreState extends State<More> {
                       ],
                     ),
                     onPressed: () {
-                      Navigator.pushNamed(context, "/payment1");
+                      Navigator.pushNamed(context, "/payment");
                     },
                   ),
                 ),
@@ -102,6 +118,14 @@ class _MoreState extends State<More> {
                   decoration: BoxDecoration(
                     color: lightSlateBlue,
                     borderRadius: BorderRadius.circular(20),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.withOpacity(0.6),
+                        spreadRadius: 2,
+                        blurRadius: 7,
+                        offset: Offset(0, 4),
+                      ),
+                    ],
                   ),
                   child: IconButton(
                     icon: Column(
@@ -124,7 +148,7 @@ class _MoreState extends State<More> {
                       ],
                     ),
                     onPressed: () {
-                      Navigator.pushNamed(context, "/scanToPay1");
+                      Navigator.pushNamed(context, "/scanToPay");
                     },
                   ),
                 ),
@@ -138,6 +162,14 @@ class _MoreState extends State<More> {
                   decoration: BoxDecoration(
                     color: lightSlateBlue,
                     borderRadius: BorderRadius.circular(20),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.withOpacity(0.6),
+                        spreadRadius: 2,
+                        blurRadius: 7,
+                        offset: Offset(0, 4),
+                      ),
+                    ],
                   ),
                   child: IconButton(
                     icon: Column(
@@ -174,15 +206,62 @@ class _MoreState extends State<More> {
                 style: TextStyle(
                   fontSize: 20,
                   color: lightSlateBlue,
+                  fontWeight: FontWeight.w500,
                 ),
               ),
               onPressed: () {
-                Navigator.pushNamed(context, "/logIn");
+                alertDialog(context);
               },
             ),
           ],
         ),
       ),
+    );
+  }
+
+  void alertDialog(BuildContext context) {
+    var alertDialog = AlertDialog(
+      shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.all(Radius.circular(20.0))),
+      backgroundColor: white,
+      title: Center(
+        child: Text(
+          "Hamro Bank",
+          style: TextStyle(
+              fontSize: 30,
+              color: indigo,
+              fontFamily: 'Arial_Rounded',
+              fontWeight: FontWeight.w500,
+              decoration: TextDecoration.underline),
+        ),
+      ),
+      content: Text(
+        "Are you sure you want to log out.",
+        style: TextStyle(
+          fontSize: 16,
+          color: indigo,
+        ),
+      ),
+      actions: [
+        TextButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          child: Text('No'),
+        ),
+        TextButton(
+          onPressed: () {
+            Navigator.pushNamed(context, "/logIn");
+          },
+          child: Text('Yes'),
+        )
+      ],
+    );
+    showDialog(
+      context: context,
+      builder: (buildContext) {
+        return alertDialog;
+      },
     );
   }
 }

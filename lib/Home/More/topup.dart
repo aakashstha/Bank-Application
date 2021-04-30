@@ -2,34 +2,26 @@ import 'package:flutter/material.dart';
 import 'package:bank_application/themeColors.dart';
 import 'package:flutter/cupertino.dart';
 
-class Payment2 extends StatefulWidget {
+class TopUp extends StatefulWidget {
+
   @override
-  _Payment2State createState() => _Payment2State();
+  _TopUpState createState() => _TopUpState();
 }
 
-class _Payment2State extends State<Payment2> {
+class _TopUpState extends State<TopUp> {
+  TextEditingController _amountController = TextEditingController();
+  TextEditingController _numberController = TextEditingController();
+  TextEditingController _accountNumberController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: lightSlateBlue,
         title: Text(
-          'NTC Prepaid Topup',
+          'Topup',
           style: TextStyle(fontSize: 18),
         ),
-        leading: Row(
-          children: [
-            IconButton(
-              icon: Icon(
-                Icons.arrow_back_ios_rounded,
-                size: 28,
-              ),
-              onPressed: () {
-                Navigator.pop(context);
-              },
-            ),
-          ],
-        ),
-        backgroundColor: lightSlateBlue,
       ),
       body: Container(
         padding: EdgeInsets.symmetric(horizontal: 10),
@@ -56,9 +48,10 @@ class _Payment2State extends State<Payment2> {
                 ),
               ),
               child: TextField(
+                controller: _amountController,
                 decoration: InputDecoration(
                   contentPadding: EdgeInsets.only(left: 20),
-                  hintText: 'Rs. 100',
+                  hintText: 'Eg. Rs.100',
                   border: InputBorder.none,
                 ),
               ),
@@ -86,9 +79,10 @@ class _Payment2State extends State<Payment2> {
                 ),
               ),
               child: TextField(
+                controller: _numberController,
                 decoration: InputDecoration(
                   suffixIcon: Padding(
-                    padding: const EdgeInsets.only(right: 10),
+                    padding: const EdgeInsets.only(right: 15),
                     child: Icon(
                       Icons.contact_phone,
                       color: lightSlateBlue,
@@ -123,6 +117,7 @@ class _Payment2State extends State<Payment2> {
                 ),
               ),
               child: TextField(
+                controller: _accountNumberController,
                 decoration: InputDecoration(
                   contentPadding: EdgeInsets.only(left: 20),
                   hintText: '1876987435627162',
@@ -157,20 +152,24 @@ class _Payment2State extends State<Payment2> {
                         color: black,
                       ),
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      alertDialog(context);
+                    },
                   ),
                 ),
                 SizedBox(height: 10),
                 TextButton(
                   child: Text(
-                    "Cancel",
+                    "Clear",
                     style: TextStyle(
                       fontSize: 18,
                       color: white,
                     ),
                   ),
                   onPressed: () {
-                    // Navigator.pushNamed(context, "/");
+                    _amountController.clear();
+                    _numberController.clear();
+                    _accountNumberController.clear();
                   },
                 ),
               ],
@@ -178,6 +177,53 @@ class _Payment2State extends State<Payment2> {
           ],
         ),
       ),
+    );
+  }
+
+  void alertDialog(BuildContext context) {
+    var alertDialog = AlertDialog(
+      shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.all(Radius.circular(20.0))),
+      backgroundColor: white,
+      title: Center(
+        child: Text(
+          "CONFIRM",
+          style: TextStyle(
+              fontSize: 30,
+              color: indigo,
+              fontFamily: 'Arial_Rounded',
+              fontWeight: FontWeight.w500,
+              decoration: TextDecoration.underline),
+        ),
+      ),
+      content: Text(
+        "Are you sure you want to topup to this number. This process cannot be undo.",
+        style: TextStyle(
+          fontSize: 16,
+          color: indigo,
+        ),
+      ),
+      actions: [
+        TextButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          child: Text('No'),
+        ),
+        TextButton(
+          onPressed: () {
+            Navigator.pop(context);
+            Navigator.pop(context);
+          },
+          child: Text('Yes'),
+        )
+      ],
+    );
+    showDialog(
+      context: context,
+      builder: (buildContext) {
+        return alertDialog;
+      },
     );
   }
 }

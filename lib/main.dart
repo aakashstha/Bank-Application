@@ -8,16 +8,15 @@ import 'package:bank_application/Home/More/helpDesk.dart';
 import 'package:bank_application/navigation.dart';
 import 'package:bank_application/Home/More/more.dart';
 import 'package:bank_application/Home/news.dart';
-import 'package:bank_application/Home/More/payment1.dart';
-import 'package:bank_application/Home/More/payment2.dart';
-import 'package:bank_application/Home/More/scanToPay1.dart';
-import 'package:bank_application/Home/More/scanToPay2.dart';
+import 'package:bank_application/Home/More/payment.dart';
+import 'package:bank_application/Home/More/topup.dart';
+import 'package:bank_application/Home/More/scanToPay.dart';
 import 'package:bank_application/Home/More/sendMoney.dart';
 import 'package:bank_application/themeColors.dart';
 import 'package:bank_application/logIn.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import 'Home/More/payment2.dart';
+import 'Home/More/topup.dart';
 
 void main() {
   runApp(MyApp());
@@ -52,10 +51,9 @@ class MyApp extends StatelessWidget {
 
         // Others
         '/sendMoney': (context) => SendMoney(),
-        '/payment1': (context) => Payment1(),
-        '/payment2': (context) => Payment2(),
-        '/scanToPay1': (context) => ScanToPay1(),
-        '/scanToPay2': (context) => ScanToPay2(),
+        '/payment': (context) => Payment(),
+        '/topup': (context) => TopUp(),
+        '/scanToPay': (context) => ScanToPay(),
         '/helpDesk': (context) => HelpDesk(),
       },
       home: Scaffold(

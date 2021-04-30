@@ -2,44 +2,36 @@ import 'package:flutter/material.dart';
 import 'package:bank_application/themeColors.dart';
 import 'package:flutter/cupertino.dart';
 
-class Payment1 extends StatefulWidget {
+class Payment extends StatefulWidget {
   @override
-  _Payment1State createState() => _Payment1State();
+  _PaymentState createState() => _PaymentState();
 }
 
-class _Payment1State extends State<Payment1> {
+class _PaymentState extends State<Payment> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
+        automaticallyImplyLeading: true,
+        backgroundColor: lightSlateBlue,
         title: Text(
           'Payment',
           style: TextStyle(fontSize: 18),
         ),
-        leading: Row(
-          children: [
-            IconButton(
-              icon: Icon(
-                Icons.arrow_back_ios_rounded,
-                size: 28,
-              ),
-              onPressed: () {
-                Navigator.pop(context);
-              },
-            ),
-          ],
-        ),
-        backgroundColor: lightSlateBlue,
       ),
       body: Container(
         padding: EdgeInsets.only(top: 30),
         child: Center(
           child: Column(
             children: [
-              topUpButtons('./images/ncellLogo.png', 'Topup'),
-              topUpButtons('./images/ntcLogo.png', 'Topup'),
-              topUpButtons('./images/ntcLogo.png', 'Topup'),
-              topUpButtons('./images/smartCellLogo.png', 'Topup'),
+              topUpButtons('./images/ncellLogo.png', 'Topup', 'Ncell Topup'),
+              topUpButtons('./images/ntcLogo.png', 'Prepaid\nTopup',
+                  'NTC Prepaid Topup'),
+              topUpButtons('./images/ntcLogo.png', 'Postpaid\nTopup',
+                  'NTC Postpaid Topup'),
+              topUpButtons(
+                  './images/smartCellLogo.png', 'Topup', 'Smart Cell Topup'),
             ],
           ),
         ),
@@ -47,7 +39,7 @@ class _Payment1State extends State<Payment1> {
     );
   }
 
-  Widget topUpButtons(String imagePath, String title) {
+  Widget topUpButtons(String imagePath, String title, String appBarTitle) {
     return TextButton(
       child: Container(
         width: 390,
@@ -55,6 +47,14 @@ class _Payment1State extends State<Payment1> {
         decoration: BoxDecoration(
           color: white,
           borderRadius: BorderRadius.circular(20),
+          boxShadow: [
+            BoxShadow(
+              color: black.withOpacity(0.6),
+              spreadRadius: 2,
+              blurRadius: 2,
+              offset: Offset(0, 4),
+            ),
+          ],
         ),
         child: Row(
           children: [
@@ -76,7 +76,11 @@ class _Payment1State extends State<Payment1> {
         ),
       ),
       onPressed: () {
-        Navigator.pushNamed(context, "/payment2");
+        Navigator.pushNamed(
+          context,
+          "/topup",
+          arguments: appBarTitle,
+        );
       },
     );
   }

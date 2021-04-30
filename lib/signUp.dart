@@ -6,24 +6,11 @@ class SignUp extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: lightSlateBlue,
         title: Text(
           'Sign Up',
           style: TextStyle(fontSize: 18),
         ),
-        leading: Row(
-          children: [
-            IconButton(
-              icon: Icon(
-                Icons.arrow_back_ios_rounded,
-                size: 28,
-              ),
-              onPressed: () {
-                Navigator.pop(context);
-              },
-            ),
-          ],
-        ),
-        backgroundColor: lightSlateBlue,
       ),
       body: Padding(
         padding: EdgeInsets.only(top: 50, left: 12),
