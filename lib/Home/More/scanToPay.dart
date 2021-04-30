@@ -13,7 +13,7 @@ class ScanToPay extends StatefulWidget {
 class _ScanToPayState extends State<ScanToPay> {
   bool share = true;
   MainAxisAlignment mainAxisAlignment = MainAxisAlignment.start;
-  File _image;
+  File image;
   final picker = ImagePicker();
 
   Future getImage() async {
@@ -21,7 +21,7 @@ class _ScanToPayState extends State<ScanToPay> {
 
     setState(() {
       if (pickedFile != null) {
-        _image = File(pickedFile.path);
+        image = File(pickedFile.path);
       } else {
         print('No image selected.');
       }

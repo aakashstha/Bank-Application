@@ -1,5 +1,3 @@
-import 'package:bank_application/Home/home.dart';
-import 'package:bank_application/test.dart';
 import 'package:flutter/material.dart';
 
 import 'package:bank_application/signUp.dart';
@@ -14,7 +12,6 @@ import 'package:bank_application/Home/More/scanToPay.dart';
 import 'package:bank_application/Home/More/sendMoney.dart';
 import 'package:bank_application/themeColors.dart';
 import 'package:bank_application/logIn.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 import 'Home/More/topup.dart';
 

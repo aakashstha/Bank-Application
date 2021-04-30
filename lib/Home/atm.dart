@@ -1,7 +1,5 @@
-import 'dart:ffi';
-
-import 'package:bank_application/themeColors.dart';
 import 'package:flutter/material.dart';
+import 'package:bank_application/themeColors.dart';
 import 'package:flutter/cupertino.dart';
 
 class ATM extends StatefulWidget {
