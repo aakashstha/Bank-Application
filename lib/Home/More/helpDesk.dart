@@ -28,7 +28,7 @@ class HelpDesk extends StatelessWidget {
                 Container(
                   padding: EdgeInsets.symmetric(horizontal: 5),
                   width: 390,
-                  height: 357,
+                  height: 367,
                   decoration: BoxDecoration(
                     color: white,
                     borderRadius: BorderRadius.circular(20),

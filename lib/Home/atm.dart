@@ -8,14 +8,13 @@ class ATM extends StatefulWidget {
 }
 
 class _ATMState extends State<ATM> {
-  String _chosenValue;
+  String _chosenValue = "Radhe Radhe";
   String _message = '';
 
   @override
   Widget build(BuildContext context) {
     List<String> _atmLocation = [
-      'Radhe Radhe 1',
-      'Radhe Radhe 2',
+      'Radhe Radhe',
       'Koteshwor',
       'Naxal',
       'Chabahil',
@@ -83,9 +82,9 @@ class _ATMState extends State<ATM> {
                             fontSize: 20,
                             fontWeight: FontWeight.w600),
                       ),
-                      onChanged: (String value) {
+                      onChanged: (value) {
                         setState(() {
-                          _chosenValue = value;
+                          _chosenValue = value!;
                         });
                       },
                     ),

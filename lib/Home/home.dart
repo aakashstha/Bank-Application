@@ -28,7 +28,6 @@ class _HomeState extends State<Home> {
               Container(
                 padding: EdgeInsets.symmetric(horizontal: 5),
                 width: 390,
-                height: 432,
                 decoration: BoxDecoration(
                   color: white,
                   borderRadius: BorderRadius.circular(20),
@@ -36,7 +35,7 @@ class _HomeState extends State<Home> {
                 child: Column(
                   children: [
                     SizedBox(height: 30),
-
+              
                     // your account to show
                     Container(
                       child: Column(
@@ -49,7 +48,7 @@ class _HomeState extends State<Home> {
                         ],
                       ),
                     ),
-
+              
                     // Others Information
                     Container(
                       width: 390,
@@ -57,7 +56,7 @@ class _HomeState extends State<Home> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          info('Aakash Shrestha - Saving Acount', 21),
+                          info('Aakash Shrestha  - Saving Acount', 21),
                           SizedBox(
                             height: 10,
                           ),
@@ -65,7 +64,7 @@ class _HomeState extends State<Home> {
                         ],
                       ),
                     ),
-
+              
                     Container(
                       padding: EdgeInsets.symmetric(horizontal: 10),
                       child: Row(
@@ -110,6 +109,7 @@ class _HomeState extends State<Home> {
                         ],
                       ),
                     ),
+                    SizedBox(height: 20)
                   ],
                 ),
               ),

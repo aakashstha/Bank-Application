@@ -13,7 +13,7 @@ class ScanToPay extends StatefulWidget {
 class _ScanToPayState extends State<ScanToPay> {
   bool share = true;
   MainAxisAlignment mainAxisAlignment = MainAxisAlignment.start;
-  File image;
+  late File image;
   final picker = ImagePicker();
 
   Future getImage() async {
@@ -39,21 +39,20 @@ class _ScanToPayState extends State<ScanToPay> {
         ),
       ),
       body: Container(
-        padding: EdgeInsets.only(left: 12, top: 40),
+        padding: EdgeInsets.only(left: 10, top: 40, right: 10),
         child: Container(
-          width: 390,
-          height: 582,
+          // width: 390,
+          height: 642,
           decoration: BoxDecoration(
             color: white,
             borderRadius: BorderRadius.circular(20),
           ),
           child: Column(
             children: [
-              // SizedBox(height: 10),
               // Main Box in this Page
               Container(
                 width: 390,
-                height: 520,
+                // height: 580,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
                 ),
@@ -61,70 +60,74 @@ class _ScanToPayState extends State<ScanToPay> {
               ),
 
               // Button line to indicate
-              Row(
-                mainAxisAlignment: mainAxisAlignment,
-                children: [
-                  Container(
-                    width: 190,
-                    height: 2,
-                    color: lightSlateBlue,
-                  ),
-                ],
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 10),
+                child: Row(
+                  mainAxisAlignment: mainAxisAlignment,
+                  children: [
+                    Container(
+                      width: 170,
+                      height: 2,
+                      color: lightSlateBlue,
+                    ),
+                  ],
+                ),
               ),
               // Buttons
-              Row(
-                children: [
-                  Container(
-                    width: 190,
-                    height: 60,
-                    decoration: BoxDecoration(
-                      color: bermuda,
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    child: CupertinoButton(
-                      child: Text(
-                        "SHARE",
-                        style: TextStyle(
-                          fontSize: 20,
-                          color: black,
-                        ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 10),
+                child: Row(
+                  children: [
+                    Container(
+                      width: 170,
+                      height: 60,
+                      decoration: BoxDecoration(
+                        color: bermuda,
+                        borderRadius: BorderRadius.circular(20),
                       ),
-                      onPressed: () {
-                        setState(() {
-                          mainAxisAlignment = MainAxisAlignment.start;
-                          share = true;
-                        });
-                      },
-                    ),
-                  ),
-                  SizedBox(
-                    width: 10,
-                  ),
-                  Container(
-                    width: 190,
-                    height: 60,
-                    decoration: BoxDecoration(
-                      color: bermuda,
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    child: CupertinoButton(
-                      child: Text(
-                        "SCAN",
-                        style: TextStyle(
-                          fontSize: 20,
-                          color: black,
+                      child: CupertinoButton(
+                        child: Text(
+                          "SHARE",
+                          style: TextStyle(
+                            fontSize: 20,
+                            color: black,
+                          ),
                         ),
+                        onPressed: () {
+                          setState(() {
+                            mainAxisAlignment = MainAxisAlignment.start;
+                            share = true;
+                          });
+                        },
                       ),
-                      onPressed: () {
-                        setState(() {
-                          mainAxisAlignment = MainAxisAlignment.end;
-                          share = false;
-                        });
-                        getImage();
-                      },
                     ),
-                  ),
-                ],
+                    Spacer(),
+                    Container(
+                      width: 170,
+                      height: 60,
+                      decoration: BoxDecoration(
+                        color: bermuda,
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      child: CupertinoButton(
+                        child: Text(
+                          "SCAN",
+                          style: TextStyle(
+                            fontSize: 20,
+                            color: black,
+                          ),
+                        ),
+                        onPressed: () {
+                          setState(() {
+                            mainAxisAlignment = MainAxisAlignment.end;
+                            share = false;
+                          });
+                          getImage();
+                        },
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ],
           ),
@@ -150,7 +153,7 @@ class _ScanToPayState extends State<ScanToPay> {
         Padding(
           padding: const EdgeInsets.only(top: 5, bottom: 10),
           child: Text(
-            'Aakash Shrestha',
+            'Aakash Shrestha ',
             style: TextStyle(
               fontSize: 40,
               color: indigo,
@@ -172,7 +175,7 @@ class _ScanToPayState extends State<ScanToPay> {
             style: TextStyle(fontSize: 20, color: indigo),
           ),
         ),
-        SizedBox(height: 38),
+        SizedBox(height: 40),
       ],
     );
   }
@@ -183,6 +186,7 @@ class _ScanToPayState extends State<ScanToPay> {
         Image.asset(
           './images/cameraView.png',
         ),
+        SizedBox(height: 80)
       ],
     );
   }
